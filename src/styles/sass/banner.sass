@@ -1,0 +1,45 @@
+@import vars
+.banner
+    padding: 100px 0
+    background: url(/img/banner_bg.png) center center no-repeat
+    background-position: cover
+    cursor: pointer
+    &-wrapper
+        display: flex
+        align-items: center
+    &-text
+        flex-basis: 26%
+        margin-right: 33px
+        color: $colorText
+    &_title
+        margin-bottom: 19px
+        font-size: 25px
+        line-height: 29px
+    &_description
+        font-size: 16px
+        line-height: 22px
+
+@media (max-width: 768px)
+    .banner
+        background: url(/img/min/banner_bg.png) center center no-repeat
+        &-text
+            flex-basis: 50%
+
+@media (max-width: 414px)
+    .banner
+        padding-left: 25px
+        padding-bottom: 80px
+        &-wrapper
+            flex-wrap: wrap
+        &_img
+            width: 80%
+            margin-bottom: 16px
+        &-text
+            flex-basis: 100%
+            order: 1
+        &_title
+            font-size: 20px
+            margin-bottom: 5px
+        &_description
+            font-size: 14px
+            line-height: 1.5

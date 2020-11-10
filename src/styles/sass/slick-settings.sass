@@ -1,0 +1,173 @@
+@import vars
+// -------------------------------------hero-slider
+.hero-slider
+    .slick
+        &-list.draggable
+            overflow: visible
+        &-arrow
+            position: absolute
+        &-next
+            bottom: -20px
+            left: 100px
+        &-prev
+            bottom: -20px
+
+.hero
+    &-slide
+        display: flex !important
+        max-height: 375px
+        &:focus
+            outline: none
+    &-footer
+        &-arrow
+            &--prev
+                bottom: -42px
+                left: -144px
+            &--next
+                left: 141px
+                bottom: -91px
+
+.hidden
+    display: none!important
+
+
+/**
+ *  Progress Bar
+ */
+.progress 
+    position: absolute
+    bottom: -89px
+    right: 66px
+    display: block
+    width: 450px
+    height: 3px
+    border-radius: 10px
+    // overflow: hidden
+  
+    background-color: #f5f5f5
+    background-image: linear-gradient(to right, $colorRed, $colorRed)
+    background-repeat: no-repeat
+    background-size: 0 100%
+  
+    transition: background-size 3s ease-in-out
+
+.progress_num
+    display: block
+    position: absolute
+    right: -66px
+    margin-top: -11.5px
+    font-weight: bold
+    font-size: 25px
+    line-height: 29px
+    color: $colorText
+    
+
+// -------------------------------------hero-slider---end
+
+// -----------------------------------------menu-slider
+
+.menu-slider
+    .slick
+        &-list.draggable
+            height: 163px
+            padding: 20px 50px
+        &-current
+            margin-bottom: 10px
+            box-shadow: 0px 11px 17px rgba(0, 0, 0, 0.1)
+            opacity: 1
+            transform: translateY(-10px)
+
+.menu
+    &_button
+        border: none
+        background: transparent
+        position: absolute
+        top: 50%
+        margin-top: -17.5px
+        cursor: pointer
+        outline: none
+        &--next
+            right: -65px
+        &--prev
+            left: -65px
+        &:hover .menu_arrow-path
+            stroke: #FF4545
+    &_arrow
+        &-path
+            stroke: #5B5B5B
+            transition: 0.5s
+
+.bestsellers-slider
+    .slick
+        &-list.draggable
+            height: 485px
+            padding: 35px 50px
+            // margin-bottom: 70px
+        &-current
+            margin-bottom: 10px
+            box-shadow: 0px 13px 40px rgba(0, 0, 0, 0.2)
+            opacity: 1
+            transform: translateY(-15px)
+
+    
+
+
+
+@media (max-width: 768px)
+    .progress
+        display: none
+    .hero
+        padding-bottom: 230px
+        &-social
+            display: none
+        &-slide
+            flex-wrap: wrap
+            &-text
+                flex-basis: 100%
+                order: 1
+                text-align: center
+                &_title
+                    margin: auto
+                    margin-top: 14px
+                &_button
+                    display: none
+            &-images
+                flex-basis: 100%
+        &-footer
+            &-arrow
+                font-size: 0
+                bottom: -161px
+                &_img
+                    &--prev
+                        margin-right: 0
+                    &--next
+                        margin-left: 0
+                &--prev
+                    left: 50%
+                    margin-left: -108px                             
+                &--next
+                    right: 50%
+                    margin-right: -108px
+                    left: auto                    
+                &_desc
+                    display: none
+
+@media (max-width: 414px)
+    .hero
+        padding-top: 130px
+        padding-bottom: 0
+        &-slide
+            &-text
+                &_title
+                    margin-top: -32px
+        &-footer
+            &-arrow
+                bottom: 50px
+
+@media (max-width: 320px)
+    .hero
+        &-slide
+            &-text
+                &_title
+                    margin-top: 14px
+   

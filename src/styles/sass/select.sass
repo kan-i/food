@@ -1,0 +1,110 @@
+@import vars
+select
+    display: none
+
+.filter
+    display: none
+
+.sort
+    &-wrapper
+        position: relative
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-wrap: nowrap
+        padding: 51px 0 55px
+        &_input
+            background: url(/img/arrow_down.svg) center right 15px no-repeat
+            &:focus
+                outline-color: $colorText
+
+.select-box
+    position: relative
+    border-radius: 3px
+    font-size: 13px
+    line-height: 15px
+    color: $colorGrey
+    border: none
+    flex-basis: 20%
+    box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.11)
+    &:not(:last-child)
+        margin-right: 15px
+
+.select-selected
+    position: relative
+    &:after
+        position: absolute
+        content: ""
+        top: 14px
+        right: 10px
+        width: 0
+        height: 0
+        border: 6px solid transparent
+        border-color: $colorText transparent transparent transparent
+
+    &.select-arrow-active:after
+        border-color: transparent transparent $colorText transparent
+        top: 7px
+
+.select-items div, .select-selected
+    color: $colorGrey
+    padding: 8px 16px
+    cursor: pointer
+
+.select-items
+    position: absolute
+    background-color: $colorTextHover
+    top: 32px
+    left: 0
+    right: 0
+    z-index: 99
+    div
+        border: 1px solid transparent
+        border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent
+
+.select-hide
+    display: none
+
+.select-items div:hover, .same-as-selected
+    background-color: rgba(0, 0, 0, 0.1)
+
+@media (max-width: 768px)
+    .sort
+        &-wrapper
+            flex-wrap: wrap
+            justify-content: flex-start
+            padding-bottom: 35px
+    .select-box
+        flex-basis: 31%
+        margin-bottom: 20px
+
+@media (max-width: 414px)
+    .sort
+        &-wrapper
+            padding-top: 35px
+    .select-box
+        display: none
+    .filter
+        position: relative
+        width: 100%
+        display: block
+        text-align: left
+        padding-left: 12px
+        padding-top: 8px
+        padding-bottom: 8px
+        border: none
+        background-color: #fff
+        border-radius: 3px
+        font-size: 13px
+        color: $colorGrey
+        box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.11)
+        &::after
+            content: ''
+            width: 14px
+            height: 8px
+            position: absolute
+            right: 17px
+            top: 50%
+            margin-top: -7px
+            background-image: url(/img/filter_icon.svg)
+            background-position: center center

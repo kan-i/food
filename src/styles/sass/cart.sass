@@ -1,0 +1,194 @@
+@import vars
+.cart-page
+    display: none
+.cart
+    position: relative
+    box-shadow: 0px 12px 39px rgba(0, 0, 0, 0.12)
+    border-radius: 5px
+    &-header
+        display: flex
+        align-items: center
+        background-color: #fafafa
+        padding: 50px 70px
+        &_title
+            font-weight: 500
+            font-size: 25px
+            line-height: 29px
+            color: $colorBlack
+            &-arrow
+                vertical-align: middle
+                margin: 0 51px
+                &-path
+                    fill: $colorGrey
+                    &--active
+                        fill: $colorRed
+
+            &--active
+                color: $colorRed
+    &-wrapper
+        display: flex
+        justify-content: space-between
+        padding: 70px
+        font-size: 20px
+        line-height: 23px
+    &-items
+        flex-basis: 75%
+        padding-right: 50px
+        border-right: 1px solid #BFB1B1
+    &-item
+        display: flex
+        align-items: center
+        justify-content: space-between
+        color: $colorBlack
+        &:not(:last-child)
+            margin-bottom: 40px
+
+        &-wrapper
+            display: flex
+            flex-basis: 80%
+            justify-content: space-between
+            align-items: center
+        &_figure
+            flex-basis: 108px
+            max-width: 108px
+            height: 108px
+        &_img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            border-radius: 5px
+        &_title
+            max-width: 250px
+            line-height: 1.3
+            flex-grow: 1
+        &_price
+            font-size: 18px
+            line-height: 21px
+            
+    &-footer
+        position: relative
+        flex-basis: 20%
+        align-items: center
+        padding-top: 30px
+        display: flex
+        flex-direction: column
+        color: $colorBlack
+        &_sum
+            margin-bottom: 20px
+            strong
+                padding-left: 15px
+            &--bold
+                font-weight: 500
+        &_button
+            font-weight: 500
+            font-size: 13px
+            line-height: 15px
+            color: #FFFFFF
+            padding: 13px 58px
+            border: none
+            background-color: $colorRed
+            outline: none
+            border-radius: 5px
+            cursor: pointer
+    &-footer.fixed
+        position: fixed
+        
+
+
+.count
+    font-weight: 500
+    font-size: 20px
+    line-height: 23px
+    color: $colorGrey
+    border: 1px solid $colorText
+    padding: 11px 17px
+    border-radius: 50px
+    margin: 0 13px
+
+.counter-button
+    cursor: pointer
+    svg
+        width: 20px
+        height: 20px
+        path
+            stroke: $colorBlack
+
+@media (max-width: 768px)
+    .cart
+        &-header
+            &_title
+                &:not(:first-child)
+                    display: none
+                &:first-child
+                    svg
+                        display: none
+        &-wrapper
+            flex-direction: column
+        &-items
+            padding-right: 0
+            border-bottom: 1px solid #BFB1B1
+            border-right: none
+            padding-bottom: 50px
+        &-item
+            &-wrapper
+                flex-wrap: wrap
+                flex-basis: 70%
+            &_title
+                margin-bottom: 25px
+                flex-basis: 100%
+                max-width: none
+        &-footer
+            flex-direction: row
+            align-items: center
+            justify-content: space-between
+            &_sum
+                margin-bottom: 0
+
+@media (max-width: 414px)
+    .cart
+        &-header
+            padding: 34px 0px 34px 36px
+        &-wrapper
+            padding: 30px
+        &-item
+            position: relative
+            &-wrapper
+                flex-basis: 100%
+            &_title
+                margin-bottom: 20px
+                font-size: 15px
+            &_figure
+                position: absolute
+                bottom: -5px
+                max-width: 37px
+                height: 37px
+            &_price
+                font-size: 13px
+            &_counter
+                padding-left: 70px
+        &-item
+        &:not(:last-child)
+            margin-bottom: 58px
+        &-footer
+            flex-direction: column
+            align-items: flex-end
+            &_sum
+                margin-bottom: 29px
+                font-size: 15px
+                strong
+                    font-size: 13px
+
+
+    .count
+        padding: 7px 11px
+        font-size: 13px
+    
+
+    .counter-button
+        cursor: pointer
+        svg
+            width: 10px
+            height: 10px
+            path
+                stroke: $colorBlack
+

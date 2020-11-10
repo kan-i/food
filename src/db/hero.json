@@ -1,0 +1,29 @@
+[
+    {
+        "id": "hs1",
+        "name": "Сочные бургеры со скидкой 30%",
+        "image": "img/бургер_3.png",
+        "minImage": "img/min/бургер_3.png",
+        "imageShadow": "img/тень_5.png",
+        "imageSmoke": "img/дым.png",
+        "imageVegetables": "img/овощи.png"
+    },
+    {
+        "id": "hs2",
+        "name": "Получи скидку 25% на первый заказ",
+        "image": "img/стейк_2.png",
+        "minImage": "img/min/стейк_2.png",
+        "imageShadow": "img/тень_2.png",
+        "imageSmoke": "img/дым.png",
+        "imageVegetables": "img/transparent.png"
+    },
+    {
+        "id": "hs3",
+        "name": "Доставка пиццы из печи за 30 минут",
+        "image": "img/пицца_2.png",
+        "minImage": "img/min/пицца_2.png",
+        "imageShadow": "img/тень_7.png",
+        "imageSmoke": "img/дым.png",
+        "imageVegetables": "img/transparent.png"
+    }
+]

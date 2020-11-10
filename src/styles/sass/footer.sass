@@ -1,0 +1,36 @@
+@import vars
+.footer
+    color: $colorText
+    padding: 55px
+    background: linear-gradient(131.41deg, #151515 -8.5%, #3A3A3A 112%)
+    &-wrapper
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &-social
+        &_link
+            color: $colorText
+            font-size: 12px
+            line-height: 14px
+            text-decoration: none
+            &:hover
+                color: $colorRed
+            &:not(:last-child)
+                margin-right: 24px
+.copyright
+    font-weight: 300
+    font-size: 12px
+    line-height: 14px
+
+@media (max-width: 768px)
+    .footer
+        padding: 35px
+
+@media (max-width: 414px)
+    .footer
+        &-wrapper
+            flex-direction: column
+        .header-logo
+            margin-bottom: 18px
+        &-social
+            margin-bottom: 18px

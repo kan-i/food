@@ -1,0 +1,167 @@
+@import vars
+.catalog
+    &-card
+        // cursor: pointer
+        width: 268px
+        height: 371px
+        background: #FFFFFF
+        box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.13)
+        border-radius: 5px
+        margin-bottom: 72px
+        transition: 0.3s
+        transform: translateY(0)
+        &:not(:nth-child(4n))
+            margin-right: 32px
+        &:hover
+            // box-shadow: 1px 15px 21px rgba(0, 0, 0, 0.15)
+            // transform: translateY(-15px)
+
+// style for card
+.cards
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+.card
+    &_img
+        cursor: pointer
+        width: 100%
+        max-height: 166px
+        object-fit: cover
+        margin-bottom: 18px
+        border-top-left-radius: 5px
+        border-top-right-radius: 5px
+    &-text
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        min-height: 184px
+        color: $colorBlack
+        padding: 0 20px 20px 20px
+        &_title
+            cursor: pointer
+            margin-bottom: 17px
+            font-weight: 500
+            font-size: 18px
+            line-height: 21px
+        &_description
+            overflow: hidden
+            position: relative
+            line-height: 1.3em
+            max-height: 3.9em
+            text-align: justify
+            padding-right: 1em
+            margin-bottom: 17px
+            font-size: 13px
+            &::before
+                content: '…'
+                position: absolute
+                right: 0
+                bottom: 0
+            &::after
+                content: ""
+                position: absolute
+                right: 0
+                width: 1em
+                height: 1em
+                margin-top: 0.2em
+                background: white
+
+        &_price
+            font-weight: 700
+            font-size: 15px
+            line-height: 15px
+            flex-grow: 1
+        &_button
+            position: relative
+            font-weight: 500
+            font-size: 11px
+            line-height: 13px
+            color: #FFFFFF
+            padding: 14px 27px
+            background: transparent
+            border: none
+            border-color: transparent
+            border-radius: 5px
+            cursor: pointer
+            transition: all, 0.45s
+            &_icon
+                position: absolute
+                top: 20.5px
+                margin-top: -10px
+                right: 20.5px
+                margin-right: -10px
+                path
+                    stroke: transparent
+                    transition: all, 0.45s
+            &:hover
+                .circle-button
+                    background-color: #ff6464
+                    // width: 0
+    &-footer
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+.circle-button
+    position: absolute
+    top: 0
+    right: 0
+    z-index: -1
+    width: 100%
+    height: 100%
+    background-color: $colorRed
+    border-radius: 5px
+    transition: all, 0.45s
+    border-color: transparent
+
+//style for pages
+.pages
+    margin-bottom: 90px
+    text-align: center
+    font-size: 13px
+    line-height: 15px
+    color: $colorGrey
+    &_link
+        padding: 3px 7px
+        font-size: 13px
+        margin: 0 3px
+        background-color: #fff
+        border: 1px solid $colorText
+        border-radius: 2px
+        cursor: pointer
+        &:focus
+            outline: none
+    &_link.active
+        color: $colorTextHover
+        background-color: $colorRed
+        border: 1px solid $colorRed
+
+.cirlce
+    color: transparent
+    .circle-button
+        width: 41px
+        border-radius: 50%
+    .card-text_button_icon
+        path
+            stroke: #fff
+
+@media (max-width: 768px)
+    .catalog
+        &-card
+            &:not(:nth-child(4n))
+                margin-right: 0
+    .cards
+        justify-content: space-around
+    .card
+        margin-right: 0
+    .pages
+        margin-bottom: 70px
+
+@media (max-width: 414px)
+    .catalog
+        &-card
+            margin-bottom: 35px
+    .pages
+        margin-bottom: 20px
+    .card-text_button
+        padding: 14px 22px

@@ -1,0 +1,173 @@
+@import vars
+
+.rect
+    stroke-width: 1
+    stroke: $colorText
+    transition: 0.8s
+
+
+
+.header
+    padding: 25px 0
+    position: fixed
+    top: 0
+    width: 100%
+    z-index: 2
+    &-wrap
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &-logo
+        text-transform: uppercase
+        display: flex
+        align-items: center
+    
+
+    &-search
+        all: unset
+        margin-right: 13px
+        width: 32px
+        &_border
+            position: absolute
+            left: 0
+            top: 0 
+        &_rect
+            stroke-dasharray: 35, 150
+            stroke-dashoffset: 35     
+        &:hover .rect            
+            stroke-width: 1
+            stroke: $colorText
+            stroke-dasharray: 70, 0
+            transition: 0.8s
+        &_border
+            position: absolute
+            left: 0
+            top: 0
+        &_input
+            cursor: pointer
+            position: absolute
+            top: 0
+            right: 0
+            height: 32px
+            opacity: 0
+            color: $colorBlack
+            box-sizing: border-box
+            border: 1px solid transparent
+            background-color: transparent
+            border-radius: 5px
+            font-size: 1em
+            padding: .5em
+            width: 100%
+            transition: all 1s ease
+            outline: none
+            &:focus
+                cursor: auto
+                width: 240px
+                border: 1px solid $colorText
+                opacity: 1
+                background-color: $colorText
+    &-cart
+        height: 32px
+        &_border
+            position: absolute
+            right: 0
+            top: 0      
+        &:hover .rect            
+            stroke-width: 1
+            stroke: $colorText
+            stroke-dasharray: 70, 0
+            opacity: 1
+            transition: 0.8s
+        &_rect
+            stroke-dasharray: 17,140
+            stroke-dashoffset: 123
+            opacity: 0.5
+        &_sum
+            margin-left: 15px
+        &_icon
+            margin-left: 8px
+
+    &-search, &-cart, &-menu
+        height: 32px
+        text-align: center
+        line-height: 32px
+        position: relative
+        cursor: pointer
+        font-size: 12px
+        color: $colorText
+    
+    &-menu
+        width: 32px
+        margin-right: 26px
+        display: none
+
+                
+.fa-hamburger
+    color: #fff
+    background-color: $colorRed
+    font-size: 12px
+    padding: 8px
+    border-radius: 50%
+.logo
+    &_name
+        margin-left: 8px
+        color: #fff
+        font-size: 12px
+        line-height: 14px
+        letter-spacing: 0.04em
+        font-weight: bold
+.nav
+    &_link:not(:last-child)        
+        margin-right: 38px
+    &_link
+        position: relative
+        font-size: 13px
+        line-height: 15px
+        color: $colorText
+        text-decoration: none
+        &::before
+            content: ''
+            bottom: -5px
+            left: 0
+            position: absolute
+            height: 1px
+            width: 100%
+            background-color: $colorText
+            transition: 0.2s
+            transform: scaleX(0)            
+        &:hover:before
+            transform: scaleX(1)            
+            
+.phone
+    &_number
+        margin-right: 35px
+        font-size: 13px
+        color: $colorText
+        text-decoration: none
+        &:hover
+            color: $colorTextHover
+    &_callback
+        color: $colorText
+        font-weight: 300
+        font-size: 12px
+        &:hover
+            color: $colorTextHover
+            
+@media (max-width: 768px)
+    .header
+        &-nav
+            display: none
+        &-search
+            display: none
+        &-menu
+            display: block
+
+@media (max-width: 414px)
+    .header
+        max-width: 414px
+        &-phone
+            display: none
+        &-menu
+            margin-right: 16px
+
+    

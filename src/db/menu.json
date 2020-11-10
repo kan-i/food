@@ -1,0 +1,42 @@
+[{
+        "id": "m1",
+        "name": "Все меню",
+        "image": "img/menu_slide_02.png"
+    },
+    {
+        "id": "m2",
+        "name": "Суши и роллы",
+        "image": "img/menu_slide_08.png"
+    },
+    {
+        "id": "m3",
+        "name": "Пицца",
+        "image": "img/menu_slide_03.png"
+    },
+    {
+        "id": "m4",
+        "name": "Курица",
+        "image": "img/menu_slide_04.png"
+    },
+    {
+        "id": "m5",
+        "name": "Десерты",
+        "image": "img/menu_slide_05.png"
+    },
+    {
+        "id": "m6",
+        "name": "Бургеры",
+        "image": "img/menu_slide_06.png"
+    },
+    {
+        "id": "m7",
+        "name": "Вок",
+        "image": "img/menu_slide_07.png"
+    },
+    {
+        "id": "m8",
+        "name": "Супы",
+        "image": "img/menu_slide_01.png"
+    }
+
+]

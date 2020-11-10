@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery food - сервис доставки еды</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-wrap">
+                <div class="header-logo">
+                    <i class="fas fa-hamburger"></i>
+                    <span class="logo_name">Delivery food</span>
+                </div>
+                <!-- /.logo -->
+                <nav class="header-nav">
+                    <a href="#" class="nav_link">Меню</a>
+                    <a href="#" class="nav_link">Акции</a>
+                    <a href="#" class="nav_link">Доставка</a>
+                    <a href="#" class="nav_link">Оплата</a>
+                    <a href="#" class="nav_link">Контакты</a>
+                </nav>
+                <!-- /.nav -->
+                <div class="header-phone">
+                    <a class="phone_number" href="tel:+79991234567">8 (800) 555-66-66</a>
+                    <a class="phone_callback" href="#">Обратный звонок</a>
+                </div>
+                <!-- /.phone -->
+                <div class="header-wrap">
+                    <div class="header-menu">
+                        <!-- <i class="fas fa-bars header-search_icon"></i> -->
+                        <svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line y1="0.5" x2="15" y2="0.5" stroke="#C4C4C4" />
+                            <line y1="4.5" x2="15" y2="4.5" stroke="#C4C4C4" />
+                            <line y1="8.5" x2="15" y2="8.5" stroke="#C4C4C4" />
+                        </svg>
+                    </div>
+                    <!-- /.menu -->
+                    <div class="header-search">
+                        <i class="fas fa-search header-search_icon"></i>
+                        <svg class="header-search_border" width="32" height="32" viewBox="0 0 32 32" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect class="rect header-search_rect" x="0.5" y="0.5" width="31" height="31" rx="2.5" />
+                        </svg>
+                        <input type="text" class="header-search_input">
+                    </div>
+                    <!-- /.serach -->
+                    <div class="header-cart">
+                        <i class="fas fa-cart-arrow-down header-cart_icon"></i>
+                        <svg class="header-search_border" width="32" height="32" viewBox="0 0 32 32" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect class="rect header-cart_rect" x="0.5" y="0.5" width="31" height="31" rx="2.5" />
+                        </svg>
+                        <span class="header-cart_sum">0 ₽</span>
+                    </div>
+                    <!-- /.cart -->
+                </div>
+                <!-- /.header-serach-wrap -->
+            </div>
+        </div>
+    </header>
+    <div class="navbar">
+        <div class="container">
+            <a href="https://newmywebsite.ru/#portfolio">Вернуться в портфолио</a>
+        </div>
+    </div>
+    <div class="cart-page animate__animated">
+        <div class="container">
+            <div class="cart">
+                <header class="cart-header">
+                    <h3 class="cart-header_title cart-header_title--active">
+                        Корзина
+                        <svg class="cart-header_title-arrow" width="56" height="9" viewBox="0 0 56 9" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path class="cart-header_title-arrow-path cart-header_title-arrow-path--active"
+                                d="M55.3536 4.85355C55.5488 4.65829 55.5488 4.34171 55.3536 4.14645L52.1716 0.964467C51.9763 0.769205 51.6597 0.769205 51.4645 0.964467C51.2692 1.15973 51.2692 1.47631 51.4645 1.67157L54.2929 4.5L51.4645 7.32843C51.2692 7.52369 51.2692 7.84027 51.4645 8.03553C51.6597 8.2308 51.9763 8.2308 52.1716 8.03553L55.3536 4.85355ZM-4.37114e-08 5L55 5L55 4L4.37114e-08 4L-4.37114e-08 5Z" />
+                        </svg>
+                    </h3>
+                    <h3 class="cart-header_title">Доставка и оплата
+                        <svg class="cart-header_title-arrow" width="56" height="9" viewBox="0 0 56 9" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path class="cart-header_title-arrow-path"
+                                d="M55.3536 4.85355C55.5488 4.65829 55.5488 4.34171 55.3536 4.14645L52.1716 0.964467C51.9763 0.769205 51.6597 0.769205 51.4645 0.964467C51.2692 1.15973 51.2692 1.47631 51.4645 1.67157L54.2929 4.5L51.4645 7.32843C51.2692 7.52369 51.2692 7.84027 51.4645 8.03553C51.6597 8.2308 51.9763 8.2308 52.1716 8.03553L55.3536 4.85355ZM-4.37114e-08 5L55 5L55 4L4.37114e-08 4L-4.37114e-08 5Z" />
+                        </svg>
+                    </h3>
+                    <h3 class="cart-header_title">Заказ оформлен</h3>
+                </header>
+                <div class="cart-wrapper">
+                    <div class="cart-items"></div>
+                    <footer class="cart-footer">
+                        <span class="cart-footer_sum">К оплате <strong class="cart-footer_sum--bold"></strong></span>
+                        <button class="cart-footer_button">Далее</button>
+                    </footer>
+                </div>
+                <button class="cart_close modal_close"></button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-menu animate__animated">
+        <svg class="modal-menu_btn" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L11 11M11 1L1 11" stroke="#C4C4C4" />
+        </svg>
+        <div class="modal-menu-search">
+            <input type="text" placeholder="Поиск" class="modal-menu-search_input">
+            <i class="fas fa-search modal-menu-search_icon"></i>
+        </div>
+        <nav class="modal-menu-nav">
+            <a href="#" class="modal-menu_link">Меню</a>
+            <a href="#" class="modal-menu_link">Акции</a>
+            <a href="#" class="modal-menu_link">Доставка</a>
+            <a href="#" class="modal-menu_link">Оплата</a>
+            <a href="#" class="modal-menu_link">Контакты</a>
+        </nav>
+    </div>
+    <div class="hero">
+        <div class="container">
+            <div class="hero-wrap">
+                <nav class="hero-social">
+                    <a href="#" class="hero-social_link animate__animated animate__flipInX animate__delay-1s">
+                        <i class="fab fa-vk"></i>
+                    </a>
+                    <a href="#" class="hero-social_link animate__animated animate__flipInX animate__delay-2s">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="hero-social_link animate__animated animate__flipInX animate__delay-3s">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="hero-social_link animate__animated animate__flipInX animate__delay-4s">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </nav>
+                <div class="hero-slider">
+                </div>
+                <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                    <span class="slider__label"></span>
+                    <span class="progress_num animate__animated animate__flipInX animate__delay-1s"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="menu">
+        <div class="container">
+            <h2 class="menu_title">Меню</h2>
+            <div class="menu-slider">
+            </div>
+            <!-- /.menu-slider -->
+            <input class="menu_range" type="range" id="range" min="1" value="1" step="1" />
+        </div>
+    </div>
+    <div class="catalog" id="catalog">
+        <div class="container">
+            <header class="sort">
+                <div class="sort-wrapper">
+
+                    <button class="filter">Фильтр</button>
+                    <!-- /.select-box -->
+
+                    <div class="select-box">
+                        <select name="restaurants" id="restaurants" class="sort-wrapper_input restaurants">
+                            <option hidden disabled selected>Ресторан</option>
+                            <option value="burger king">Burger King</option>
+                            <option value="KFC">KFC</option>
+                            <option value="Макдоналдс">Макдоналдс</option>
+                            <option value="Domino's Pizza">Domino's Pizza</option>
+                        </select>
+                    </div>
+                    <!-- /.select-box -->
+                    <div class="select-box">
+                        <select name="kitchen" id="kitchen" class="sort-wrapper_input kitchen">
+                            <option hidden disabled selected>Кухня</option>
+                            <option value="Американская">Американская</option>
+                            <option value="Русская">Русская</option>
+                            <option value="Итальянская">Итальянская</option>
+                            <option value="Мексиканская">Мексиканская</option>
+                            <option value="Узбекская">Узбекская</option>
+                        </select>
+                    </div>
+                    <!-- /.select-box -->
+                    <div class="select-box">
+                        <select name="price" id="price" class="sort-wrapper_input price">
+                            <option hidden disabled selected>Цена</option>
+                            <option value="1">Цена по возрастанию</option>
+                            <option value="0">Цена по убыванию</option>
+                        </select>
+                    </div>
+                    <!-- /.select-box -->
+                    <div class="select-box">
+                        <select name="rating" id="rating" class="sort-wrapper_input rating">
+                            <option hidden disabled selected>Рейтинг</option>
+                            <option value="по возрастанию">Рейтинг по возрастанию</option>
+                            <option value="по убыванию">Рейтинг по убыванию</option>
+                        </select>
+                    </div>
+                    <!-- /.select-box -->
+                    <div class="select-box">
+                        <select name="comments" id="comments" class="sort-wrapper_input comments">
+                            <option hidden disabled selected>Отзывы</option>
+                            <option value="по возрастанию">Отзывы по возрастанию</option>
+                            <option value="по убыванию">Отзывы по убыванию</option>
+                        </select>
+                    </div>
+                    <!-- /.select-box -->
+                </div>
+            </header>
+            <div class="cards">
+            </div>
+            <nav class="pages">
+            </nav>
+        </div>
+    </div>
+    <section class="banner">
+        <div class="container banner-wrapper">
+            <div class="banner-text">
+                <h2 class="banner_title">Бизнес-ланч со скидкой</h2>
+                <p class="banner_description">Бизнес-ланч со скидкой 20% по промокоду <strong>"BLFOOD20"</strong></p>
+            </div>
+            <img src="img/banner_sale.svg" alt="20%" class="banner_img">
+        </div>
+    </section>
+    <section class="bestsellers">
+        <div class="container">
+            <h2 class="bestsellers_title">Популярные</h2>
+            <div class="bestsellers-slider">
+            </div>
+            <!-- .bestsellers-slider -->
+            <input class="bestsellers_range" type="range" id="bestsellers-range" min="1" value="1" step="1" />
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-wrapper">
+                <div class="header-logo">
+                    <i class="fas fa-hamburger"></i>
+                    <span class="logo_name">Delivery food</span>
+                </div>
+                <!-- /.logo -->
+                <nav class="header-nav">
+                    <a href="#" class="nav_link">Меню</a>
+                    <a href="#" class="nav_link">Акции</a>
+                    <a href="#" class="nav_link">Доставка</a>
+                    <a href="#" class="nav_link">Оплата</a>
+                    <a href="#" class="nav_link">Контакты</a>
+                </nav>
+                <!-- /.nav -->
+                <nav class="footer-social">
+                    <a href="#" class="footer-social_link">
+                        <i class="fab fa-vk"></i>
+                    </a>
+                    <a href="#" class="footer-social_link">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="footer-social_link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="footer-social_link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </nav>
+                <!-- .footer-social -->
+                <div class="copyright">
+                    ©2020, “Деливери фуд”
+                </div>
+                <!-- /.copyright -->
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
